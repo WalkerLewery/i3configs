@@ -182,7 +182,8 @@ bindsym $mod+r exec gnome-terminal -e ranger
 #enable 2ed screen on the HDMI-1 using the screenon
 bindsym $mod+p exec ./screenon
 
-
+#Toggle Wifi
+bindsym XF86WLAN exec ./wifiToggle
 
 
 
