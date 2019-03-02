@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $(xrandr --listactivemonitors | grep "HDMI-1"| wc -l) -eq 1 ] 
+	then 
+		xrandr --output HDMI-1 --off
+		echo off
+
+	else
+		xrandr --output HDMI-1 --auto --left-of eDP-1
+		echo on
+fi
