@@ -54,23 +54,13 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# change container layout (stacked, tabbed)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
  
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
 #open configs
 bindsym $mod+c exec sudo gedit ~/Desktop/git/i3/i3blocks.conf /home/zed/.config/i3/config
 
@@ -168,8 +158,6 @@ bindsym XF86MonBrightnessUp exec  sudo echo $((`cat /sys/class/backlight/*/brigh
 
 bindsym XF86MonBrightnessDown exec sudo echo $((`cat /sys/class/backlight/*/brightness` - 75)) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
-# Auto multi display 
-exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1
 # TEST AT A LATER TIME
 
 for_window [class="^.*"] border pixel 0
