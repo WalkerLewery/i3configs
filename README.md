@@ -1,4 +1,4 @@
-# i3
+# i3configs
 i3blocks -required 
 i3lock-fancy - required
 wifiToggle && screenon belong in ~
